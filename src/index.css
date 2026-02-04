@@ -5,6 +5,8 @@
 
 body {
   max-width: 660px !important;
+  min-width: 660px !important;
+  min-height: 1600px !important;
   max-height: 1600px !important;
 }
 
