@@ -3,14 +3,19 @@
   padding: 0;
 }
 
+body {
+  max-width: 660px !important;
+  max-height: 1600px !important;
+}
+
 @font-face {
   font-family: roboto-mono;
   src: url(./assets/fonts/RobotoMono-Bold.ttf);
 }
 
 .chek {
-  width: 660px;
-  height: 1600px;
+  width: 660px !important;
+  height: 1600px !important;
   display: flex;
   flex-direction: column;
   padding-top: 33px;
