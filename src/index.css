@@ -3,13 +3,6 @@
   padding: 0;
 }
 
-body {
-  max-width: 660px !important;
-  min-width: 660px !important;
-  min-height: 1600px !important;
-  max-height: 1600px !important;
-}
-
 @font-face {
   font-family: roboto-mono;
   src: url(./assets/fonts/RobotoMono-Bold.ttf);
@@ -69,16 +62,73 @@ body {
 .chek-content {
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  gap: 4px;
 }
 
-.chek-content h2 {
+.chek-row {
+  display: grid;
+  grid-template-columns: 45% 55%;
   font-family: roboto-mono;
-  font-weight: 700;
-  font-size: 36px;
-  letter-spacing: 5% !important;
-  color: #000;
-  display: flex;
-  justify-content: space-between;
+}
+
+.chek-row span:last-child {
   text-align: right;
+}
+
+.chek-row span {
+  font-size: 36px;
+  font-weight: 700;
+  letter-spacing: 5% !important;
+  line-height: 150%;
+  word-break: break-word;
+}
+
+@media print {
+  @page {
+    size: 58mm auto;
+    margin: 0;
+  }
+
+  html,
+  body {
+    width: 58mm;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    display: flex;
+    justify-content: center;
+  }
+
+  .chek {
+    width: 58mm !important;
+    height: auto !important;
+    padding: 4mm;
+  }
+
+  button {
+    display: none;
+  }
+  .logo {
+    display: block;
+    margin: 0 auto 6mm auto;
+    width: 42mm !important;
+    height: auto !important;
+  }
+  .qr-code {
+    display: block;
+    margin: 6mm auto;
+    width: 32mm !important;
+    height: 32mm !important;
+  }
+  .chek-row span {
+    font-size: 10px;
+  }
+  .chek-bottom h1 {
+    font-size: 10px;
+  }
+  .chek-bottom p {
+    font-size: 10px;
+  }
 }
