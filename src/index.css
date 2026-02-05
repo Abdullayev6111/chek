@@ -104,7 +104,21 @@
   .chek {
     width: 58mm !important;
     height: auto !important;
-    padding: 0mm;
+    padding: 4mm;
+  }
+
+  .chek-row {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    column-gap: 4px;
+  }
+
+  .chek-row span:first-child {
+    white-space: nowrap;
+  }
+
+  .chek-row span:last-child {
+    text-align: right;
   }
 
   button {
@@ -123,12 +137,18 @@
     height: 32mm !important;
   }
   .chek-row span {
-    font-size: 18px;
+    font-size: 13px;
+    font-weight: 900;
+    letter-spacing: 1%;
   }
   .chek-bottom h1 {
-    font-size: 18px;
+    font-size: 13px;
+    font-weight: 900;
+    letter-spacing: 1%;
   }
   .chek-bottom p {
-    font-size: 18px;
+    font-size: 13px;
+    font-weight: 900;
+    letter-spacing: 1%;
   }
 }
