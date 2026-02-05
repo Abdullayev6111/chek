@@ -104,7 +104,7 @@
   .chek {
     width: 58mm !important;
     height: auto !important;
-    padding: 4mm;
+    padding: 4mm 0;
   }
 
   .chek-row {
