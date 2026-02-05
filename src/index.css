@@ -23,6 +23,15 @@
   margin: 0 auto;
 }
 
+button {
+  padding: 12px 18px;
+  border-radius: 15px;
+  border: none;
+  background-color: #000;
+  color: #fff;
+  cursor: pointer;
+}
+
 .naqsh {
   margin-top: 31px;
   margin-bottom: 32px;
@@ -80,7 +89,6 @@
   font-weight: 700;
   letter-spacing: 5% !important;
   line-height: 150%;
-  word-break: break-word;
 }
 
 @media print {
@@ -109,8 +117,9 @@
 
   .chek-row {
     display: grid;
-    grid-template-columns: auto 1fr;
-    column-gap: 4px;
+    grid-template-columns: max-content 1fr;
+    column-gap: 2mm;
+    align-items: start;
   }
 
   .chek-row span:first-child {
@@ -119,36 +128,62 @@
 
   .chek-row span:last-child {
     text-align: right;
+    white-space: pre-line;
+    word-break: normal;
+    overflow-wrap: break-word;
+  }
+
+  .date-row span:first-child {
+    white-space: normal !important;
+    line-height: 1.2;
+  }
+
+  .naqsh {
+    margin: 5mm 0;
+    margin-top: 10mm;
   }
 
   button {
     display: none;
   }
+
   .logo {
     display: block;
-    margin: 0 auto 6mm auto;
+    margin: 6mm auto -4mm auto;
     width: 42mm !important;
     height: auto !important;
   }
+
   .qr-code {
     display: block;
-    margin: 6mm auto;
+    margin: 15px auto;
     width: 32mm !important;
     height: 32mm !important;
   }
+
   .chek-row span {
     font-size: 13px;
     font-weight: 900;
     letter-spacing: 1%;
   }
+
   .chek-bottom h1 {
     font-size: 13px;
     font-weight: 900;
     letter-spacing: 1%;
   }
+
   .chek-bottom p {
     font-size: 13px;
     font-weight: 900;
     letter-spacing: 1%;
+  }
+
+  .chek-bottom {
+    margin-top: 15px;
+  }
+
+  .chek-bottom h1 {
+    margin-top: 2px;
   }
 }

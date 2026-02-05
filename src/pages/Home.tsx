@@ -3,9 +3,24 @@ import naqsh from '../assets/images/naqsh.svg';
 import QRCode from '../assets/images/Vector.svg';
 
 const Home = () => {
+  const formatPerson = (text: string) => {
+    const match = text.match(/^([A-Z]\.[A-Z]\.)(.+)$/i);
+    if (!match) return text;
+
+    const prefix = match[1];
+    const rest = match[2].trim();
+
+    // agar familiya 10 belgidan uzun bo‘lsa pastga tushiramiz
+    if (rest.length > 10) {
+      return `${prefix}\n${rest}`;
+    }
+
+    return text;
+  };
+
   return (
     <>
-      <button onClick={() => window.print()}>PDF chiqarish</button>
+      <button onClick={() => window.print()}>Chiqarish</button>
       <section className="chek">
         <img src={logoChek} className="logo" />
         <img src={naqsh} className="naqsh" />
@@ -30,9 +45,9 @@ const Home = () => {
             <span>AF-01-20</span>
           </div>
 
-          <div className="chek-row">
+          <div className="chek-row surname-row">
             <span>O‘qituvchi:</span>
-            <span>X.S.Qodirov</span>
+            <span style={{ whiteSpace: 'pre-line' }}>{formatPerson('I.I.Muhammadjonov')}</span>
           </div>
 
           <div className="chek-row">
@@ -50,7 +65,7 @@ const Home = () => {
             <span>51872</span>
           </div>
 
-          <div className="chek-row">
+          <div className="chek-row date-row">
             <span>To‘lov sanasi:</span>
             <span>2024-10-17</span>
           </div>
@@ -60,9 +75,9 @@ const Home = () => {
             <span>11:45:00</span>
           </div>
 
-          <div className="chek-row">
+          <div className="chek-row surname-row">
             <span>Kassir:</span>
-            <span>I.I. Obidov</span>
+            <span style={{ whiteSpace: 'pre-line' }}>{formatPerson('X.S.Abdullajonov')}</span>
           </div>
         </div>
         <div className="chek-bottom">
