@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm install *)",
+      "Bash(Remove-Item \"c:\\\\Users\\\\HP\\\\OneDrive\\\\Desktop\\\\Work\\\\chek\\\\src\\\\pages\\\\Home.tsx\")",
+      "Bash(npx tsc *)"
+    ]
+  }
+}
